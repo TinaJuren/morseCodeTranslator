@@ -89,7 +89,11 @@ public class Translator {
 
     public void getMorse(String addedSentence) {
         for (String letters : addedSentence.split(""))
-            out.print(morseCode.get(letters) + " ");
+            if (morseCode.get(letters) == null) {
+                out.print("(" + letters + " is not available in the translator)");
+            } else {
+                out.print(morseCode.get(letters) + " ");
+            }
     }
 
 }
