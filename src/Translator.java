@@ -76,7 +76,11 @@ public class Translator {
 
     public void getEnglishLetters(String addedSentence) {
         for (String morse : addedSentence.split(" "))
-            out.print(englishLetter.get(morse));
+            if (englishLetter.get(morse) == null) {
+                out.print("(" + morse + " is not available in the translator)");
+            } else {
+                out.print(englishLetter.get(morse));
+            }
     }
 
     public String getMorseCode(String e) {
