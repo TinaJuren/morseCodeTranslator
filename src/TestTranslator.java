@@ -1,7 +1,5 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class TestTranslator {
 
@@ -12,7 +10,7 @@ public class TestTranslator {
 
         String actual = translator.getEnglishLetter("*");
 
-        assertEquals("E", actual);
+        Assertions.assertEquals("E", actual);
     }
 
     @Test
@@ -22,7 +20,7 @@ public class TestTranslator {
 
         String actual = translator.getEnglishLetter("-");
 
-        assertEquals("T", actual);
+        Assertions.assertEquals("T", actual);
     }
 
     @Test
@@ -32,7 +30,7 @@ public class TestTranslator {
 
         String actual = translator.getMorseCode("E");
 
-        assertEquals("*", actual);
+        Assertions.assertEquals("*", actual);
     }
 
     @Test
@@ -40,9 +38,9 @@ public class TestTranslator {
 
         Translator translator = new Translator();
 
-        String actual = translator.getMorseCode("*****");
+        String actual = translator.getEnglishLetter("******");
 
-        assertNull(actual);
+        Assertions.assertNull(actual);
     }
 
     @Test
@@ -52,7 +50,7 @@ public class TestTranslator {
 
         String actual = translator.getMorseCode("Ö");
 
-        assertNull(actual);
+        Assertions.assertNull(actual);
     }
 
 

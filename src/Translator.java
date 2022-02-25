@@ -38,6 +38,19 @@ public class Translator {
         englishLetter.put("-*--", "Y");
         englishLetter.put("--**", "Z");
         englishLetter.put("/", " ");
+        englishLetter.put("*----", "1");
+        englishLetter.put("**---", "2");
+        englishLetter.put("***--", "3");
+        englishLetter.put("****-", "4");
+        englishLetter.put("*****", "5");
+        englishLetter.put("-****", "6");
+        englishLetter.put("--***", "7");
+        englishLetter.put("---**", "8");
+        englishLetter.put("----*", "9");
+        englishLetter.put("-----", "0");
+        englishLetter.put("*-*-*-", ".");
+        englishLetter.put("--**--", ",");
+        englishLetter.put("**--**", "?");
 
         morseCode = new HashMap<>();
 
@@ -68,6 +81,19 @@ public class Translator {
         morseCode.put("Y", "-*--");
         morseCode.put("Z", "--**");
         morseCode.put(" ", " ");
+        morseCode.put("1", "*----");
+        morseCode.put("2", "**---");
+        morseCode.put("3", "***--");
+        morseCode.put("4", "****-");
+        morseCode.put("5", "*****");
+        morseCode.put("6", "-****");
+        morseCode.put("7", "--***");
+        morseCode.put("8", "---**");
+        morseCode.put("9", "----*");
+        morseCode.put("0", "-----");
+        morseCode.put(".", "*-*-*-");
+        morseCode.put(",", "--**--");
+        morseCode.put("?", "**--**");
     }
 
     public String getEnglishLetter (String s) {
