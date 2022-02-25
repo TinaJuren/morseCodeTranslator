@@ -1,5 +1,7 @@
 import java.util.HashMap;
 
+import static java.lang.System.out;
+
 public class Translator {
 
     private final HashMap<String, String> englishLetter;
@@ -72,8 +74,18 @@ public class Translator {
         return englishLetter.get(s);
     }
 
+    public void getEnglishLetters(String addedSentence) {
+        for (String morse : addedSentence.split(" "))
+            out.print(englishLetter.get(morse));
+    }
+
     public String getMorseCode(String e) {
         return morseCode.get(e);
+    }
+
+    public void getMorse(String addedSentence) {
+        for (String letters : addedSentence.split(""))
+            out.print(morseCode.get(letters) + " ");
     }
 
 }

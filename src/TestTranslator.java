@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 public class TestTranslator {
 
     @Test
-    public void testAsterixToE() {
+    public void testAsteriskToE() {
 
         Translator translator = new Translator();
 
@@ -26,7 +26,7 @@ public class TestTranslator {
     }
 
     @Test
-    public void testEToAsterix() {
+    public void testEToAsterisk() {
 
         Translator translator = new Translator();
 
@@ -36,7 +36,7 @@ public class TestTranslator {
     }
 
     @Test
-    public void testUnvalidMorseCode() {
+    public void testInvalidMorseCode() {
 
         Translator translator = new Translator();
 
@@ -46,7 +46,7 @@ public class TestTranslator {
     }
 
     @Test
-    public void testUnvalidEnglishLetter() {
+    public void testInvalidEnglishLetter() {
 
         Translator translator = new Translator();
 
