@@ -9,6 +9,7 @@ public class TranslatorMain {
 
         System.out.println("Type your message here. Use English letters (a-z) or Morse code (* and/or -). Please, separate letters by spaces and words by / or when writing Morse Code. Example: 'My name is Tina' is in Morse Code. Your input: ");
         String addedSentence = sc.nextLine();
+        addedSentence = addedSentence.toUpperCase();
 
         if ((addedSentence.contains("*") || addedSentence.contains("-") && addedSentence.contains(" "))) {
             translator.getEnglishLetters(addedSentence);
